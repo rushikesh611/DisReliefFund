@@ -1,5 +1,4 @@
-const routes = require('next-routes')(); //return a function and () means execute it
-
+const routes = require('next-routes')(); 
 routes
     .add('/campaigns/new', '/campaigns/new')
     .add('/campaigns/:address', '/campaigns/show')

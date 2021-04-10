@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Table, Grid, Icon, Label, Segment } from 'semantic-ui-react';
+import { Button, Table, Grid, Icon, Label, Segment, Image } from 'semantic-ui-react';
 import Layout from '../../../components/Layout';
 import { Link } from '../../../routes';
 import Campaings from '../../../Ethereum/campaign';
@@ -55,7 +55,7 @@ export default class RequestIndex extends Component {
                             </Link>
                         </Grid.Column>
                         <Grid.Column textAlign='center'>
-                            <Label>
+                            <Label size='big'>
                                Balance: <Icon name='ethereum' /> {web3.utils.fromWei(campaignsBalance, 'ether')} Ether
                             </Label>
                         </Grid.Column>
@@ -88,7 +88,6 @@ export default class RequestIndex extends Component {
                 </Table>
 
                 <div>Found {this.props.requestCount} requests.</div>
-
             </Layout>
         )
     }

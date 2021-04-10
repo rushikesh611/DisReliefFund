@@ -41,7 +41,7 @@ class CampaignIndex extends Component {
 			});
 			// console.log(a)
 			return {
-				header:"Campaign Name",
+				header:"Campaign",
 				meta:address,
 				description:(
 					<Image src='../static/campImage.png' wrapped ui={true} />
@@ -107,30 +107,12 @@ class CampaignIndex extends Component {
 								</Step>
 							</Step.Group>
 						</Segment>	
-							
-						{/* <section style={{ color:'teal', marginTop: 10 }}>
-							<h4>Sometimes a good idea takes a lot of funds and collective effort. You could ask for donations, but donors prefer to give to projects they are more certain will get traction and proper funding. This is an example where a crowdfunding would be ideal: you set up a goal and a deadline for reaching it. If you miss your goal, the donations are returned, therefore reducing the risk for donors. Since the code is open and auditable, there is no need for a centralized, trusted platform and therefore the only fees everyone will pay are just the gas fees.</h4>
-						</section> */}
 					</div>
 					
 					<Segment style={{marginTop:40}}>
 					<Header as='h2' icon textAlign='center'>
-								{/* <Icon name='users' size='small'/> */}
 								<Header.Content>Open Campaigns</Header.Content>
 							</Header>
-					{/* here */}
-					
-					{/* <Link route="/campaigns/new">
-						<a>
-							<Button animated='fade' floated="right" basic color='teal'>
-								 <Button.Content visible><p style={{color:'teal'}}>Create Campaigns</p></Button.Content>
-    								  <Button.Content hidden>
-        							  <Icon name='add circle' color='teal' />
-        							  </Button.Content>
-							</Button>
-						</a>
-					</Link> */}
-					{/* { this.renderCampaigns() } */}
 					
 					<Grid divided='vertically'>
 						<Grid.Row columns={3}>

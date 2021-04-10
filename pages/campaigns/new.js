@@ -13,13 +13,13 @@ export default class CampaignNew extends Component {
     };
 
     onSubmit = async (event) => {
-        event.preventDefault(); // keep the browser to automatically submit the form to the server
+        event.preventDefault();
 
         this.setState({ loading: true, errorMessage: '' });
 
         try {
             const accounts = await web3.eth.getAccounts();
-            await factory.methods.createCampaign(this.state.minimumContribution,this.state.campaignName,this.state.campaignDescription )
+            await factory.methods.createCampaign(this.state.minimumContribution,this.state.campaignName,this.state.campaignDescription)
                 .send({
                     from: accounts[0]
                 });
@@ -63,6 +63,10 @@ export default class CampaignNew extends Component {
                                 this.setState({ minimumContribution: event.target.value })
                             }}
                         />
+                        {/* <label>Campaign Image</label>
+                        <input type="file" onChange={event => {
+                                this.setState({ campaignImage: event.target.value })
+                            }}/> */}
                     </Form.Field>
 
                     <Message error header="Oops!" content={this.state.errorMessage} />

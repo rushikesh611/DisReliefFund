@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Layout from '../../components/Layout';
 import Campaign from '../../Ethereum/campaign';
-import { Card, Grid, Button, Image } from 'semantic-ui-react'
+import { Card, Grid, Button, Image, Progress } from 'semantic-ui-react'
 import web3 from '../../Ethereum/web3';
 import ContributeForm from '../../components/ContributeForm';
 import { Link } from '../../routes';
+import Breadcrumb from '../../components/Breadcrumb';
 
 export default class CampaignShow extends Component {
+
     static async getInitialProps(props) {
         const campaign = Campaign(props.query.address);
 
@@ -19,7 +21,7 @@ export default class CampaignShow extends Component {
             noOfContributor: summary[3],
             manager: summary[4],
             campName: summary[5],
-            campDesc: summary[6]
+            campDesc: summary[6],
         };
     }
 
@@ -31,15 +33,16 @@ export default class CampaignShow extends Component {
             noOfContributor,
             manager,
             campName,
-            campDesc
+            campDesc,
+            
         } = this.props;
-       
+        
         const items = [
             {
                 header: campName,
                 description: campDesc,
                 meta: 'Campaign Name',
-                // extra:<Image src='../static/campImage.png' wrapped ui={true} />,
+                // extra:<Image src={`campImg`} wrapped ui={true} />,
             },
             {
                 header: manager,
@@ -54,7 +57,7 @@ export default class CampaignShow extends Component {
             },
             {
                 header: noOfReq,
-                description: 'A request tries to withdraw money from the contract. This request must be approved by approvers.',
+                description: 'A request for withdrawing money from the available funds. This request must be approved by approvers.',
                 meta: 'Number of Requests',
             },
             {
@@ -75,20 +78,20 @@ export default class CampaignShow extends Component {
     render() {
         return (
             <Layout>
-                <h3>Campaign Details</h3>
+                <Breadcrumb/>
+                <h1 style={{textAlign:'right'}}>Campaign Details</h1>
                 <Grid>
                     <Grid.Row>
-
-                        <Grid.Column width={10}>
-                            {this.renderCard()}
-
-                        </Grid.Column>
-
                         <Grid.Column width={6}>
                             <ContributeForm address={this.props.address} />
-                            <img src='../static/img1.png' style={{width:420, height:350}}/>
+                            <img src='../static/img1.png' style={{width:400, height:330}}/>
+
                         </Grid.Column>
 
+                        <Grid.Column width={10}>
+                            
+                            {this.renderCard()}
+                        </Grid.Column>
                     </Grid.Row>
 
                     <Grid.Row>
@@ -96,7 +99,7 @@ export default class CampaignShow extends Component {
                         <Grid.Column>
                             <Link route={`/campaigns/${this.props.address}/requests`}>
                                 <a>
-                                    <Button primary>View Requests</Button>
+                                    <Button primary floated='right'>View Requests</Button>
                                 </a>
                             </Link>
                         </Grid.Column>
