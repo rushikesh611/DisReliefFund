@@ -7,8 +7,8 @@ export default() =>{
 		
 			<Link route="/">
 				<a className="item" >
-					<Icon name='home' size='big' /> 
-					{/* <Image src='../static/logo3.jpg' size='tiny'/> */}
+					{/* <Icon name='home' size='big' />  */}
+					<Image src='../static/logo3.jpg' size='tiny'/>
 					
 					DisReliefFund
 				</a>

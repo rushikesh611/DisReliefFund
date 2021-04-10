@@ -3,7 +3,7 @@ import { Container,Icon,Grid,Rail,Segment,Menu, Image } from 'semantic-ui-react'
 import { Link } from '../routes';
 export default() =>{
 	return (
-		<Container fluid style={{marginTop:50,paddingTop:100}}>
+		<Container fluid style={{marginTop:50,paddingTop:60}}>
 			
 			<Menu text>
 				<Menu.Item header>Team TetraByte <Icon name='copyright' /> 2021</Menu.Item>

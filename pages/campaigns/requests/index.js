@@ -88,6 +88,10 @@ export default class RequestIndex extends Component {
                 </Table>
 
                 <div>Found {this.props.requestCount} requests.</div>
+                <br/><br/>
+                <Image src='../../static/reqimg2.jpg' size='medium' centered/>
+               
+                
             </Layout>
         )
     }

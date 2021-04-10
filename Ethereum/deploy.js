@@ -8,7 +8,7 @@ require('dotenv').config();
 //     process.env.mnemonic,
 //     process.env.link
 // );
-const provider = new HDWalletProvider("","HTTP://127.0.0.1:7545");
+const provider = new HDWalletProvider("b0cf907e79b4fdf5c15da074ead9bacfcf8cccd1721c605d95f3b28e60f16ba8","HTTP://127.0.0.1:7545");
 
 const web3 = new Web3(provider);
 const deploy = async () => {
