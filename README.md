@@ -1,5 +1,5 @@
 Fundraising for disaster relief: support friends and family at a time when they need it most, raise money for them without an intermediary.
-
+Project for Rakathon 2021
 ## Prerequisite
 1. Install [Node JS](https://nodejs.org/en/) and [Ganache](https://www.trufflesuite.com/ganache)
 2. Create new workspace in Ganache
